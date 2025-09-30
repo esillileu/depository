@@ -14,7 +14,32 @@ import { styleText } from "util"
 const defaultHeaderWeight = [700]
 const defaultBodyWeight = [400]
 
-export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: FontSpecification) {
+export async function getSatoriFonts(
+  cfg: GlobalConfiguration,
+  headerFont: FontSpecification,
+  bodyFont: FontSpecification,
+) {
+  if (cfg.theme.fontOrigin === "local") {
+    const localFontPath = path.join(QUARTZ, "static", "fonts", "D2Coding.ttf")
+    try {
+      const fontData = await fs.readFile(localFontPath)
+      console.log(styleText("green", `Successfully loaded local font from ${localFontPath}`))
+      // Satori needs different weights to be registered
+      return [
+        { name: "D2Coding", data: fontData, weight: 400 as FontWeight, style: "normal" as const },
+        { name: "D2Coding", data: fontData, weight: 700 as FontWeight, style: "normal" as const },
+      ]
+    } catch (e) {
+      console.error(
+        styleText(
+          "red",
+          `\nError: Failed to load local font from ${localFontPath}. Make sure 'D2Coding.ttf' exists in 'quartz/static/fonts/'.`,
+        ),
+      )
+      return [] // return empty to avoid crash
+    }
+  }
+
   // Get all weights for header and body fonts
   const headerWeights: FontWeight[] = (
     typeof headerFont === "string"

@@ -14,6 +14,9 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
+          This site uses the <a href="https://github.com/naver/d2codingfont">D2Coding</a> font, licensed under the SIL Open Font License 1.1.
+        </p>
+        <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
         </p>
