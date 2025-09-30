@@ -29,25 +29,25 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#f0f8fa", // Very light cyan-white
+          lightgray: "#dce9ed",
+          gray: "#a0a8ab",
+          darkgray: "#2f3538",
+          dark: "#222222",
+          secondary: "#39C5BB", // Miku Teal
+          tertiary: "#FF7BAC", // Miku Pink
+          highlight: "rgba(57, 197, 187, 0.15)",
+          textHighlight: "#b3aa0288",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#182025", // Dark blue-grey
+          lightgray: "#2e3d46",
+          gray: "#8c9bab",
+          darkgray: "#d8e0e6",
+          dark: "#ffffff",
+          secondary: "#39C5BB", // Miku Teal
+          tertiary: "#FF7BAC", // Miku Pink
+          highlight: "rgba(57, 197, 187, 0.15)",
           textHighlight: "#b3aa0288",
         },
       },

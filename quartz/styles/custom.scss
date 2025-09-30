@@ -1,3 +1,22 @@
 @use "./base.scss";
-
+:root {
+    --toned-down-pink: #3E2D38;
+}
 // put your custom CSS here!
+.page-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5px solid var(--tertiary);
+}
+
+article h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--secondary);
+}
+
+#quartz-body ul li::marker {
+  color: var(--secondary);
+}
+a.internal.tag-link {
+    background-color: var(--toned-down-pink);
+    color: var(--tertiary);
+}
