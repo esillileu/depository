@@ -20,3 +20,8 @@ a.internal.tag-link {
     background-color: var(--toned-down-pink);
     color: var(--tertiary);
 }
+
+/* 위키링크 배경 투명화 */
+a.internal {
+    background-color: transparent;
+}
